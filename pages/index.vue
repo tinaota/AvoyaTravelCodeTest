@@ -1,14 +1,12 @@
 <template>
     <div class="flex flex-col min-h-screen">
-        <div class="bg-slate-100">Page Header</div>
-        <div class="flex-1">Main content here</div>
         <div><FooterExample /></div>
     </div>
 </template>
 
 <script setup>
-const title = ref("My App");
-const description = ref("My App Description");
+const title = ref("VUE Avoya Test");
+const description = ref("build web app using the assets and layout provided");
 useHead({
     title,
     meta: [
