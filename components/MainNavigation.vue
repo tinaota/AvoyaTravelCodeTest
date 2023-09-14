@@ -1,5 +1,5 @@
 <template>
-       <div class="text-white-100 py-3.5 px-6 md:flex justify-between items-center bg-gray-100">
+<div class="text-white-100 py-3.5 px-6 md:flex justify-between items-center bg-gray-100">
       <div class="flex items-center cursor-pointer">
             <div><img src="@/assets/logo.png" alt="Main Logo" /></div>
       </div>
@@ -16,9 +16,10 @@
         <Button></Button>
       </ul>
     </div>
-</template>
 
-<script>
+  </template>
+  
+  <script>
   import Button from './Button';
   import { ref } from 'vue'; // Import ref
   
