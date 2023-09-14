@@ -20,7 +20,7 @@
       </div>
     </div>
       </template>
-      
+      <!--Moving data inside the component having issues extracting from the app.json -->
       <script>
       export default {
         data() {

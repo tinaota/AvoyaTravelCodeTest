@@ -1,4 +1,5 @@
 <template>
+    <!--having problems with reuesting images with the data -->
     <div class="slider">
       <div class="slides">
         <div v-for="(slide, index) in slides" :key="index" class="slide" :class="{ active: index === currentIndex }">
