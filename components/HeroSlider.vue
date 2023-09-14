@@ -1,19 +1,14 @@
 <template>
     <div class="slider">
       <div class="slides">
-        <div
-          v-for="(slide, index) in slides"
-          :key="index"
-          class="slide"
-          :class="{ active: index === currentIndex }"
-        >
-          <img :src="slide.imageUrl" alt="Slide Image" />
-        </div>
+        <div v-for="(slide, index) in slides" :key="index" class="slide" :class="{ active: index === currentIndex }">
+            <img :src="slide.imageUrl" alt="Slide Image">
+            </div>
       </div>
-  
+      
       <div class="controls">
-        <button @click="prevSlide">&laquo; Prev</button>
-        <button @click="nextSlide">Next &raquo;</button>
+        <button @click="prevSlide">&laquo;</button>
+        <button @click="nextSlide">&raquo;</button>
       </div>
     </div>
   </template>
@@ -23,13 +18,13 @@
     data() {
       return {
         slides: [
-          { imageUrl: require('@/assets/slideshow/slide1.png') },
-          { imageUrl: require('@/assets/slideshow/slide2.png') },
-          { imageUrl: require('@/assets/slideshow/slide3.png') },
+        { imageUrl: "@/assets/slide1.png" },
+        { imageUrl: "@/assets/slide2.png" },
+        { imageUrl: "@/assets/slide3.png" },
         ],
         currentIndex: 0,
         intervalId: null,
-        intervalDuration: 3000, // Change slide every 3 seconds
+        intervalDuration: 3000, // Change slide every 5 seconds
       };
     },
     methods: {
@@ -49,13 +44,54 @@
     created() {
       this.startAutoRotation();
     },
-    beforeUnmount() {
+    beforeDestroy() {
       this.stopAutoRotation();
     },
   };
   </script>
   
   <style scoped>
-  /* Your styles go here as before */
-  </style>
+  .slider {
+    position: relative;
+    width: 100%;
+    max-width:100%;
+    margin: 0 auto;
+  }
   
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    flex: 0 0 100%;
+    padding: 20px;
+    text-align: center;
+    display: none;
+  }
+  
+  .slide.active {
+    display: block;
+  }
+  
+  .controls {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: grey;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: ;
+  }
+  
+  button:hover {
+    background-color: white;
+    color:#000;
+  }
+  </style>
