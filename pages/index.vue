@@ -9,7 +9,7 @@
 </template>
 
 <script setup>
-const title = ref("VUE Avoya Test");
+const title = ref("VUE Nux single landing page");
 const description = ref("build web app using the assets and layout provided");
 useHead({
     title,

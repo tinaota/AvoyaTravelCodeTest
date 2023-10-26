@@ -1,5 +1,5 @@
 <template>
-  <Carousel>
+  <Carousel :autoplay="4000" :wrap-around="true" >
     <Slide v-for="slide in slides" :key="slide.id">
       <div class="carousel__item">
         <img :src="slide.src" alt="Slide {{ slide.id }}" class="carousel__image" />
@@ -24,7 +24,7 @@ import slide2 from '/assets/slideshow/slide2.png'
 import slide3 from '/assets/slideshow/slide3.png'
 
 export default defineComponent({
-  name: 'Basic',
+  name: 'autoplay',
   components: {
     Carousel,
     Slide,
@@ -64,3 +64,4 @@ export default defineComponent({
   border: 5px solid white;
 }
 </style>
+  
