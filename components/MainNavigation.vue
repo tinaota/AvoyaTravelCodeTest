@@ -1,5 +1,5 @@
 <template>
-    <div class="text-white-100 py-3.5 px-6 md:flex justify-between items-center bg-gray-100">
+    <div class="text-white-100 py-3.5 px-6 md:flex justify-between items-center">
       <div class="flex items-center cursor-pointer">
         <div><img src="@/assets/logo.png" alt="Main Logo" /></div>
       </div>
@@ -7,7 +7,7 @@
         <font-awesome-icon :icon="open ? 'times' : 'bars'" />
       </span>
       <ul
-        class="md:flex md:items-center md:px-0 px-3 md:pb-0 md:p-10 md:static absolute md:bg-transparent bg-gray-100 text-white md:w-auto w-full top-14 duration-700 ease-in"
+        class="md:flex md:items-center md:px-0 px-3 md:pb-0  pb:-3  p-10 md:static absolute md:bg-transparent bg-gray-800 text-white md:w-auto w-full top-14 duration-700 ease-in"
         :class="[open ? 'left-0' : 'left-[-100%]']"
       >
         <li class="md:mx-4" v-for="link in Links" :key="link.name">

@@ -1,4 +1,5 @@
 <template>
+<div class="">
   <Carousel :autoplay="4000" :wrap-around="true" >
     <Slide v-for="slide in slides" :key="slide.id">
       <div class="carousel__item">
@@ -11,6 +12,7 @@
       <Pagination />
     </template>
   </Carousel>
+  </div>
 </template>
 
 <script>
@@ -19,9 +21,9 @@ import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel'
 
 import 'vue3-carousel/dist/carousel.css'
 
-import slide1 from '/assets/slideshow/slide1.png'
-import slide2 from '/assets/slideshow/slide2.png'
-import slide3 from '/assets/slideshow/slide3.png'
+import slide1 from '/assets/slideshow/image1.png'
+import slide2 from '/assets/slideshow/image2.png'
+import slide3 from '/assets/slideshow/image3.png'
 
 export default defineComponent({
   name: 'autoplay',
@@ -55,13 +57,12 @@ export default defineComponent({
 }
 
 .carousel__slide {
-  padding: 10px;
+  padding: 0px;
 }
 
 .carousel__prev,
 .carousel__next {
   box-sizing: content-box;
-  border: 5px solid white;
 }
 </style>
   
